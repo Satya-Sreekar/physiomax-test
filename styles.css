@@ -138,7 +138,7 @@ body {
 
 /* About Section */
 .about-section {
-    background-color: var(--background-color);
+/*     background-color: var(--background-color); */
     padding: 2rem 0;
     text-align: center;
 }
