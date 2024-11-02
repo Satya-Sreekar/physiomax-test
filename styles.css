@@ -1,0 +1,119 @@
+/* Root Variables */
+:root {
+    --primary-color: #1C3C6B;
+    --secondary-color: #E2292B;
+    --text-color: #6c757d;
+    --background-color: #f8f9fa;
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-heading: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Nav Bar Styling */
+.navbar {
+    font-family: var(--font-family-main);
+}
+
+.logo
+{
+    max-width: 12.5vw;
+    height: auto;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Spine Border Styling */
+.spine-border {
+    background-image: url('./media/spine.png'); /* Make sure spine image is set here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5vh;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-top: 70px; /* Adjust for fixed navbar */
+}
+
+/* Welcome Section */
+.welcome-section h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-family: var(--font-family-heading);
+}
+
+.welcome-section p.lead {
+    color: var(--secondary-color);
+}
+
+.intro-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Services Section */
+.services-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-family: var(--font-family-heading);
+}
+
+.service-box {
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box h5 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.service-box p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .services-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo
+    {
+        max-width: 25vw;
+        height: auto;
+    }
+}
