@@ -183,6 +183,11 @@ footer {
     text-align: center;
     width: 100%;
 }
+footer i{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0 0.5rem;
+}
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
