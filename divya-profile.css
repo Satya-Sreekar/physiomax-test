@@ -61,7 +61,45 @@
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  #profile {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px 15px;
+  }
+
+  #profile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    margin-bottom: 20px;
+  }
+
+  .img-divya {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+  }
+
+  .profile-text {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  #profile p strong {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  #profile p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
   #profile {
     flex-direction: column; /* Stack elements vertically */
     padding: 20px 15px;
