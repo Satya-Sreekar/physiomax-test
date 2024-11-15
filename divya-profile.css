@@ -60,6 +60,16 @@
   max-width: 700px;
 }
 
+.exit-botton {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  z-index: 9999;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
 /* Mobile responsive */
 @media (min-width: 481px) and (max-width: 768px) {
   #profile {
