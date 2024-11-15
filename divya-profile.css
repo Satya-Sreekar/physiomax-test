@@ -35,7 +35,8 @@
 }
 
 .img-divya:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
 }
 
 /* Profile Title and Intro */
@@ -73,7 +74,8 @@
 /* Mobile responsive */
 @media (min-width: 481px) and (max-width: 768px) {
   #profile {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
     padding: 20px 15px;
   }
 
@@ -111,7 +113,8 @@
 
 @media (max-width: 480px) {
   #profile {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
     padding: 20px 15px;
   }
 
