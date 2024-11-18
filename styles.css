@@ -6,8 +6,10 @@
   --background-color: #f8f9fa;
   --font-family-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-family-heading: "Montserrat", sans-serif;
-  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-light:
+  0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+;
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);;
   --header-bg: #1c3c6b;
   --accent-color: #f0932b;
 }
@@ -190,14 +192,21 @@ body {
 }
 
 .card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: var(--shadow-light);
+column-gap: 40px;
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   padding: 1.5rem;
   margin: 1rem auto;
-  max-width: 600px;
+  width: auto;
+  height: auto;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+
+  border-radius: 30px;
+  background: white;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+
 }
 
 .card:hover {
@@ -214,22 +223,63 @@ a:hover {
   text-decoration: underline;
 }
 
-button.profile-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: var(--secondary-color);
-  color: #fff;
-  font-size: 1em;
-  border: none;
-  border-radius: 8px;
+.button-name {
+  align-items: center;
+  width: 50%;
+  appearance: none;
+  background-color: #20c997; /* Teal color */
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow:
+    rgba(32, 201, 151, 0.2) 0 2px 4px,
+    rgba(32, 201, 151, 0.15) 0 7px 13px -3px,
+    #18a67e 0 -3px 0 inset; /* Slightly darker shade */
+  box-sizing: border-box;
+  color: #ffffff; /* White text */
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: var(--shadow-light);
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
 }
 
-button.profile-btn:hover {
-  box-shadow: var(--shadow-hover);
+.button-name:focus {
+  box-shadow:
+    rgba(32, 201, 151, 0.4) 0 0 0 1.5px inset,
+    rgba(32, 201, 151, 0.3) 0 2px 4px,
+    rgba(32, 201, 151, 0.2) 0 7px 13px -3px,
+    #18a67e 0 -3px 0 inset;
+}
+
+.button-name:hover {
+  background-color: #18a67e; /* Slightly darker teal */
+  box-shadow:
+    rgba(32, 201, 151, 0.3) 0 4px 8px,
+    rgba(32, 201, 151, 0.2) 0 7px 13px -3px,
+    #18a67e 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-name:active {
+  background-color: #148d6a; /* Even darker teal */
+  box-shadow: #18a67e 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 .profile-link {
