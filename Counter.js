@@ -11,7 +11,7 @@ const animateCounters = () => {
     if (position < triggerPoint && !counter.classList.contains("counted")) {
       const target = +counter.getAttribute("data-target");
       let count = 0;
-      const speed = 500; // Higher value means faster counting
+      const speed = 100; // Higher value means faster counting
 
       const increment = target / speed;
 
@@ -21,7 +21,7 @@ const animateCounters = () => {
           count = target;
           clearInterval(interval);
         }
-        counter.textContent = Math.round(count);
+        counter.textContent = Math.round(count) + "+";
       }, 1);
 
       // Mark the counter as animated to prevent it from animating again
