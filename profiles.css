@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
+  margin-bottom: 100px;
 }
 
 #profile {
@@ -89,7 +90,6 @@
     flex-direction: column;
 
     /* Stack elements vertically */
-    padding: 20px 15px;
   }
 
   #profile h3 {
@@ -128,8 +128,8 @@
   #profile {
     flex-direction: column;
     /* Stack elements vertically */
-    padding: 20px 15px;
-    width: 90%;
+
+    width: 95%;
   }
 
   #profile h3 {
