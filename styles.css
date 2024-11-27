@@ -39,6 +39,7 @@ body {
   /* padding: 1rem 2rem; */
   box-shadow: var(--shadow-light);
   width: 100%;
+  row-gap: 20px;
 }
 
 .logo {
@@ -47,18 +48,42 @@ body {
   transition: transform 0.3s ease;
 }
 
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+
 .nav-link {
   font-size: 1rem;
   color: var(--primary-color);
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
+  
+
+}
+ 
+.nav-link:hover
+ {
+  transition: color 0.3s ease;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: var(--background-color);
+  text-decoration: none;
+  height: 40px;
+  width: auto;
+  padding: 0.5rem 1rem;
 }
 
-.nav-link:hover,
 .nav-link.active {
-  color: var(--secondary-color);
-  text-decoration: underline;
+  background-color: var(--primary-color);
+  color: var(--background-color) !important;
+  border-radius: 5px;
+  
+
+  text-decoration: none;
 }
+
 
 /* Center the hospital hours text */
 #hospital-hours {
