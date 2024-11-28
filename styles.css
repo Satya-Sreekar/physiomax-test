@@ -473,7 +473,7 @@ a:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .testimonials-container h2 {
     font-size: 1.8rem;
   }
