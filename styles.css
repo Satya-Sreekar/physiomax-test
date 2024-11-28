@@ -391,8 +391,8 @@ a:hover {
 }
 
 .testimonials-container {
-
-  max-width: 1200px;
+/* border: 2px solid red; */
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -424,7 +424,7 @@ a:hover {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 0.1rem;
+  /* margin: 0 0.1rem; */
   text-align: center;
 }
 
@@ -454,6 +454,7 @@ a:hover {
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
+  z-index: 10;
 }
 
 .slider-btn {

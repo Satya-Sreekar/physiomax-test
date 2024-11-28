@@ -1,74 +1,93 @@
-const sliderTrack = document.querySelector(".slider-track");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderTrack = document.querySelector(".slider-track");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
 
-let currentIndex = 0;
-let startX = 0; // Starting touch position (X-axis)
-let moveX = 0; // Movement during touch
-let isDragging = false;
+  let currentIndex = 0;
+  let autoSlide;
 
-// Function to update the slider position
-function updateSliderPosition() {
-  const slideWidth = document.querySelector(".testimonial").clientWidth;
-  sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
-
-// Go to the previous slide
-function goToPreviousSlide() {
-  currentIndex = Math.max(currentIndex - 1, 0); // Prevent going before the first slide
-  updateSliderPosition();
-}
-
-// Go to the next slide
-function goToNextSlide() {
-  const totalSlides = sliderTrack.children.length;
-  currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
-  updateSliderPosition();
-}
-
-// Add event listeners for manual controls
-prevButton.addEventListener("click", goToPreviousSlide);
-nextButton.addEventListener("click", goToNextSlide);
-
-// Set up automatic sliding
-const autoSlideInterval = 2000; // 3000ms = 3 seconds
-let autoSlide = setInterval(goToNextSlide, autoSlideInterval);
-
-// Pause sliding when hovering over slider
-sliderTrack.addEventListener("mouseover", () => clearInterval(autoSlide));
-sliderTrack.addEventListener("mouseout", () => {
-  autoSlide = setInterval(goToNextSlide, autoSlideInterval);
-});
-
-// Touch functionality for mobile
-sliderTrack.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX; // Get the initial touch position
-  isDragging = true;
-  clearInterval(autoSlide); // Pause auto-slide on touch
-});
-
-sliderTrack.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
-  moveX = e.touches[0].clientX - startX;
-});
-
-sliderTrack.addEventListener("touchend", () => {
-  if (!isDragging) return;
-  isDragging = false;
-
-  // Determine slide direction
-  if (moveX > 50) {
-    // Swipe right -> previous slide
-    goToPreviousSlide();
-  } else if (moveX < -50) {
-    // Swipe left -> next slide
-    goToNextSlide();
+  // Function to update the slider position
+  function updateSliderPosition() {
+    const slideWidth = document.querySelector(".testimonial").offsetWidth;
+    sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
-  // Reset values
-  moveX = 0;
-  autoSlide = setInterval(goToNextSlide, autoSlideInterval); // Resume auto-slide
-});
+  // Go to the previous slide
+  function goToPreviousSlide() {
+    currentIndex = Math.max(currentIndex - 1, 0); // Prevent going before the first slide
+    updateSliderPosition();
+  }
 
-// Ensure slider resizes correctly on window resize
-window.addEventListener("resize", updateSliderPosition);
+  // Go to the next slide
+  function goToNextSlide() {
+    const totalSlides = sliderTrack.children.length;
+    currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
+    updateSliderPosition();
+  }
+
+  // Add event listeners for manual controls
+  prevButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    goToPreviousSlide();
+  });
+
+  nextButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    goToNextSlide();
+  });
+
+  // Set up automatic sliding
+  const autoSlideInterval = 3000; // 3000ms = 3 seconds
+  function startAutoSlide() {
+    autoSlide = setInterval(goToNextSlide, autoSlideInterval);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  startAutoSlide();
+
+  // Pause sliding when hovering over slider
+  sliderTrack.addEventListener("mouseover", stopAutoSlide);
+  sliderTrack.addEventListener("mouseout", startAutoSlide);
+
+  // Ensure slider resizes correctly on window resize
+  window.addEventListener("resize", updateSliderPosition);
+
+  // Touch Gesture Support for Mobile
+  let startX = 0;
+  let isDragging = false;
+
+  // Start touch event
+  sliderTrack.addEventListener("touchstart", (event) => {
+    isDragging = true;
+    startX = event.touches[0].clientX;
+    stopAutoSlide(); // Stop auto sliding during touch
+  });
+
+  // Move touch event
+  sliderTrack.addEventListener("touchmove", (event) => {
+    if (!isDragging) return;
+    const currentX = event.touches[0].clientX;
+    const diff = startX - currentX;
+
+    // Detect swipe direction
+    if (diff > 50) {
+      goToNextSlide(); // Swipe left
+      isDragging = false;
+    } else if (diff < -50) {
+      goToPreviousSlide(); // Swipe right
+      isDragging = false;
+    }
+  });
+
+  // End touch event
+  sliderTrack.addEventListener("touchend", () => {
+    isDragging = false;
+    startAutoSlide(); // Resume auto sliding
+  });
+
+  // Initialize slider position on load
+  updateSliderPosition();
+});
