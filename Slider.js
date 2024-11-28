@@ -3,6 +3,9 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 
 let currentIndex = 0;
+let startX = 0; // Starting touch position (X-axis)
+let moveX = 0; // Movement during touch
+let isDragging = false;
 
 // Function to update the slider position
 function updateSliderPosition() {
@@ -28,13 +31,43 @@ prevButton.addEventListener("click", goToPreviousSlide);
 nextButton.addEventListener("click", goToNextSlide);
 
 // Set up automatic sliding
-const autoSlideInterval = 3000; // 3000ms = 3 seconds
+const autoSlideInterval = 2000; // 3000ms = 3 seconds
 let autoSlide = setInterval(goToNextSlide, autoSlideInterval);
 
 // Pause sliding when hovering over slider
 sliderTrack.addEventListener("mouseover", () => clearInterval(autoSlide));
 sliderTrack.addEventListener("mouseout", () => {
   autoSlide = setInterval(goToNextSlide, autoSlideInterval);
+});
+
+// Touch functionality for mobile
+sliderTrack.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX; // Get the initial touch position
+  isDragging = true;
+  clearInterval(autoSlide); // Pause auto-slide on touch
+});
+
+sliderTrack.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  moveX = e.touches[0].clientX - startX;
+});
+
+sliderTrack.addEventListener("touchend", () => {
+  if (!isDragging) return;
+  isDragging = false;
+
+  // Determine slide direction
+  if (moveX > 50) {
+    // Swipe right -> previous slide
+    goToPreviousSlide();
+  } else if (moveX < -50) {
+    // Swipe left -> next slide
+    goToNextSlide();
+  }
+
+  // Reset values
+  moveX = 0;
+  autoSlide = setInterval(goToNextSlide, autoSlideInterval); // Resume auto-slide
 });
 
 // Ensure slider resizes correctly on window resize

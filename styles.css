@@ -384,42 +384,47 @@ a:hover {
 }
 
 /* Testimonials Section */
-#testimonials {
-  background-color: var(--background-color);
-  padding: 50px 20px;
-  font-family: var(--font-family-main);
+.testimonials-section {
+
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-#testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: var(--primary-color);
-}
-
 .testimonials-container {
-  max-width: 800px;
+
+  max-width: 1200px;
   margin: 0 auto;
-  position: relative;
 }
 
+.testimonials-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Slider Wrapper */
 .slider {
-  overflow: hidden;
+
   position: relative;
-  margin: 20px 0;
+  overflow: hidden;
+  width: 100%;
 }
 
 .slider-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 .testimonial {
-  min-width: 100%;
-  box-shadow: var(--shadow-light);
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 0.1rem;
   text-align: center;
 }
 
@@ -427,54 +432,69 @@ a:hover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 15px;
-  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .feedback {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .patient-name {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #333;
   font-weight: bold;
-  color: var(--text-color);
 }
 
+/* Slider Controls */
 .slider-controls {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .slider-btn {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  padding: 10px 15px;
-  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .slider-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: #0056b3;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  #testimonials h2 {
-    font-size: 2rem;
+  .testimonials-container h2 {
+    font-size: 1.8rem;
   }
 
   .testimonial {
-    padding: 15px;
+    padding: 1.5rem;
+  }
+
+  .feedback {
+    font-size: 1rem;
+  }
+
+  .patient-name {
+    font-size: 0.9rem;
+  }
+
+  .slider-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
   }
 }
+
 
 /* Footer */
 footer {
