@@ -40,6 +40,7 @@ body {
   box-shadow: var(--shadow-light);
   width: 100%;
   row-gap: 20px;
+  height: 90px;
 }
 
 .logo {
@@ -87,8 +88,9 @@ body {
 
 /* Center the hospital hours text */
 #hospital-hours {
+  font-family: var(--font-family-main);
   font-size: 0.8rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: var(--text-color); 
   flex-grow: 1;
   display: flex;
@@ -383,9 +385,121 @@ a:hover {
   }
 }
 
+
+
+/* about clinic */
+.about-us {
+  padding: 40px 15px; /* Reduce padding for smaller screens */
+  width: 100%; /* Ensure it spans the full width on smaller devices */
+  background: var(--background-color);
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.about-us .row {
+  margin: 0 auto; /* Center align on smaller screens */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center-align text for mobile */
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  max-width: 90%; /* Adjust to prevent overflow */
+  font-size: 24px; /* Reduce font size for mobile */
+  color: var(--primary-color);
+  margin-bottom: 15px; /* Adjust spacing */
+}
+
+.highlight-text {
+  font-family: var(--font-family-main);
+  font-size: 18px; /* Adjust for readability on small screens */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.features li {
+  text-wrap: balance;
+  font-size: 16px; /* Reduce font size slightly */
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  width: auto; /* Adjust width for smaller screens */
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  text-decoration: none;
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 30px 10px; /* Further reduce padding for smaller screens */
+  }
+
+  .title {
+    width: 1000px;
+    font-size: 22px; /* Adjust font size */
+  }
+
+  .highlight-text {
+    font-size: 13px; /* Smaller text for smaller screens */
+  }
+
+  .features li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us {
+    padding: 20px 10px;
+  }
+
+  .title {
+  
+    font-size: 20px; /* Ensure text remains readable on very small screens */
+  }
+
+  .highlight-text {
+    font-size: 12px;
+  }
+
+  .features li {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 8px 10px; /* Adjust button padding for small screens */
+    font-size: 14px;
+  }
+}
+
+
+
+
 /* Testimonials Section */
 .testimonials-section {
-
+font-family: var(--font-family-heading);
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -398,7 +512,7 @@ a:hover {
 
 .testimonials-container h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--primary-color);
   margin-bottom: 2rem;
 }
 
@@ -508,9 +622,16 @@ footer {
   width: 100%;
 }
 footer i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 1rem 0;
+}
+
+.contact-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  flex-direction: column;
+  display: flex;
 }
 
 /* Mobile-specific adjustments */
