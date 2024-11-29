@@ -4,63 +4,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Physiomax - Chiropractic & Physiotherapy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="butterfly.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- <style>
+    .features {
+      list-style: none; /* Removes default bullets */
+      padding: 0;       /* Removes extra padding */
+      margin: 0;        /* Removes extra margin */
+    }
+    .features li {
+      margin-right: 15px; /* Spacing between items */
+    }
+  </style> -->
 </head>
 
 <body>
   <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand fw-bold text-primary" href="#">
-      <img src="./media/logo-color-bg.png" alt="logo" class="logo" style="height: 50px;">
-    </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold text-primary" href="#">
+        <img src="./media/logo-color-bg.png" alt="logo" class="logo" style="height: 50px;">
+      </a>
 
-    <!-- Hospital Hours -->
-    <div class="timing" id="hospital-hours">
-      
-      <p>
-         Monday to Saturday
-         <br>
-         <b>9:30 AM</b> to <b>8:00 PM</b></p>
-      
+      <!-- Hospital Hours -->
+      <div class="timing" id="hospital-hours">
+
+        <p>
+          Monday to Saturday
+          <br>
+          <b>9:30 AM</b> to <b>8:00 PM</b>
+        </p>
+
+      </div>
+
+      <!-- Toggler Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel:+9160911611">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Toggler Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navigation Links -->
-    <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About Us</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials">Testimonials</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tel:+9160911611" >Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
   <!-- Main Content -->
@@ -75,6 +83,7 @@
         <section class="welcome-section text-center py-5">
           <h1 class="display-4 text-primary fw-bold">Welcome to Physiomax</h1>
           <p class="lead text-secondary">Rehab | Restore | Rebuild</p>
+          <p class="lead text-secondary">Best Chiropractic & Physiotherapy Clinic in Hyderabad</p>
           <div class="butterfly">
             <div class="o" style="--w:21.25px;--c0:hsla(5.625, 50%, 50%, 90%);--c1:transparent;--delay:0.03125s;">
               <div class="x"></div>
@@ -269,9 +278,24 @@
               <div class="x"></div>
             </div>
           </div>
-          <p class="intro-text text-muted">Your trusted clinic for chiropractic and physiotherapy
-            rehabilitation, dedicated to restoring health, rebuilding strength, and helping you live
-            pain-free.</p>
+          <p class="intro-text text-muted">Experience world-class treatment with personalized care. At <strong>PhysioMax</strong>, we help you
+            relieve chronic pain and get back on your feet.
+          </p>
+          <div class="container">
+            <div class="row">
+              <!-- Text Section -->
+              <center>
+                <ul class="features" style="text-align: left;">
+                  <li>✅ Expert Chiropractors & Physiotherapists</li>
+                  <li>✅ Affordable, Effective Pain Relief</li>
+                  <li>✅ State-of-the-Art Equipment</li>
+                  <li>✅ Hygienic & Sanitized Environment</li>
+                </ul>
+                <a href="tel:+9160911611" class="btn btn-primary">Contact Us</a>
+              </center>
+
+            </div>
+          </div>
         </section>
 
         <!-- Services Section -->
@@ -326,13 +350,14 @@
                         class="card-img-top  img-fluid rounded-square mx-auto mt-3" style="height: 25vh;width: auto;">
                       <div class="card-body">
                         <h5 class="fw-bold mb-1">Dr. Ali Abbas</h5>
-                        <h6 class="fw-semi-bold mb-1" style="font-size: 0.75rem;">MPT (Ortho)  COMT (UK)  CDNP (South Africa) 
+                        <h6 class="fw-semi-bold mb-1" style="font-size: 0.75rem;">MPT (Ortho) COMT (UK) CDNP (South
+                          Africa)
                         </h6>
                         <p class="text-muted small">Founder & Chiropractor</p>
                         <a href="./abbas.profile.html" class="profile-link">
                           <button class="button-name">Profile</button>
                         </a>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -344,10 +369,11 @@
                         class="card-img-top img-fluid rounded-square mx-auto mt-3" style="height: 25vh;width: auto;">
                       <div class="card-body">
                         <h5 class="fw-bold mb-1">Dr. Divya C</h5>
-                        <h6 class="fw-semi-bold mb-1" style="font-size: 0.75rem;">MPT (Sports) COMT (UK) CDNP (South Africa)</h6>
+                        <h6 class="fw-semi-bold mb-1" style="font-size: 0.75rem;">MPT (Sports) COMT (UK) CDNP (South
+                          Africa)</h6>
                         <p class="text-muted small">Chief Physio & Chiropractor</p>
                         <a href="./divya-profile.html" class="profile-link"><button
-                          class="button-name">Profile</button></a>
+                            class="button-name">Profile</button></a>
                       </div>
                     </div>
                   </div>
@@ -363,7 +389,7 @@
         <section id="counter">
           <h2 class="counter-heading">Our Impact & Success Stories</h2>
           <div class="counter-container">
-           
+
             <div class="box">
               <i class="fas fa-users"></i>
               <span class="counter-number" data-target="3500">0+</span>
@@ -382,85 +408,72 @@
           </div>
         </section>
 
-<!-- <--About CLinic--> 
+        <!-- <--About CLinic-->
 
-<section class="about-us" id="about">
-  <div class="container">
-    <div class="row">
-      <!-- Text Section -->
-      
-        <h2 class="title">PhysioMax: Best Chiropractic & Physiotherapy Clinic in Hyderabad</h2>
-        <p class="highlight-text">
-          Experience world-class treatment with personalized care. At <strong>PhysioMax</strong>, we help you relieve chronic pain and get back on your feet.
-        </p>
-        <ul class="features">
-          <li>✅ Expert Chiropractors & Physiotherapists</li>
-          <li>✅ Affordable, Effective Pain Relief</li>
-          <li>✅ State-of-the-Art Equipment</li>
-          <li>✅ Hygienic & Sanitized Environment</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Contact Us</a>
-      
-    </div>
-  </div>
-</section>
+        <section class="about-us" id="about">
 
-        
-<!--Testimonials Section-->
-<section id="testimonials" class="testimonials-section">
-  <div class="testimonials-container">
-    <h2>What Our Patients Say</h2>
-    <div class="slider">
-      <div class="slider-track">
-        <!-- Testimonial 1 -->
-        <div class="testimonial">
-          <!-- <img src="https://via.placeholder.com/80" alt="Patient 1" class="patient-photo" /> -->
-          <p class="feedback">
-            "I visited PhysioMax on Dr. Udai's recommendation for ACL tear recovery. Amazing results after failed surgery. Highly recommended!"           </p>
-          <h4 class="patient-name">– Amit Garg</h4>
-        </div>
+        </section>
 
-        <!-- Testimonial 2 -->
-        <div class="testimonial">
-          <!-- <img src="https://via.placeholder.com/80" alt="Patient 2" class="patient-photo" /> -->
-          <p class="feedback">
-            "Best in the city! Dr. Divya and Dr. Ali helped me regain mobility and start exercising again. Life is back!"           </p>
-          <h4 class="patient-name">– Gerishom Wakoli</h4>
-        </div>
 
-        <!-- Testimonial 3 -->
-        <div class="testimonial">
-          <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
-          <p class="feedback">
-            "Chiro and Physio treatments relieved my back pain and neck stiffness quickly. Expensive but worth it!"           </p>
-          <h4 class="patient-name">– Rajamatha Nagamani</h4>
-        </div>
+        <!--Testimonials Section-->
+        <section id="testimonials" class="testimonials-section">
+          <div class="testimonials-container">
+            <h2>What Our Patients Say</h2>
+            <div class="slider">
+              <div class="slider-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                  <!-- <img src="https://via.placeholder.com/80" alt="Patient 1" class="patient-photo" /> -->
+                  <p class="feedback">
+                    "I visited PhysioMax on Dr. Udai's recommendation for ACL tear recovery. Amazing results after
+                    failed surgery. Highly recommended!" </p>
+                  <h4 class="patient-name">– Amit Garg</h4>
+                </div>
 
-        <!-- Testimonial 4 -->
-        <div class="testimonial">
-          <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
-          <p class="feedback">
-            "Dr. Divya treated my neck and shoulder stiffness effectively. Positive changes right away!"           <h4 class="patient-name">– Uma Devi</h4>
-        </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                  <!-- <img src="https://via.placeholder.com/80" alt="Patient 2" class="patient-photo" /> -->
+                  <p class="feedback">
+                    "Best in the city! Dr. Divya and Dr. Ali helped me regain mobility and start exercising again. Life
+                    is back!" </p>
+                  <h4 class="patient-name">– Gerishom Wakoli</h4>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial">
+                  <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
+                  <p class="feedback">
+                    "Chiro and Physio treatments relieved my back pain and neck stiffness quickly. Expensive but worth
+                    it!" </p>
+                  <h4 class="patient-name">– Rajamatha Nagamani</h4>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial">
+                  <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
+                  <p class="feedback">
+                    "Dr. Divya treated my neck and shoulder stiffness effectively. Positive changes right away!"
+                  <h4 class="patient-name">– Uma Devi</h4>
+                </div>
 
 
 
-      <!-- Testimonial 5 -->
-      <div class="testimonial">
-        <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
-        <p class="feedback">
-          "After a sprained ankle, Dr. Ali and Dr. Divya provided top-notch care. Highly satisfied!"
+                <!-- Testimonial 5 -->
+                <div class="testimonial">
+                  <!-- <img src="https://via.placeholder.com/80" alt="Patient 3" class="patient-photo" /> -->
+                  <p class="feedback">
+                    "After a sprained ankle, Dr. Ali and Dr. Divya provided top-notch care. Highly satisfied!"
 
-          <h4 class="patient-name"> – Vijaya Kameshwari</h4>
-      </div>
-      </div>
-    </div>
-    <div class="slider-controls">
-      <button id="prev" class="slider-btn">&lt;</button>
-      <button id="next" class="slider-btn">&gt;</button>
-    </div>
-  </div>
-</section>
+                  <h4 class="patient-name"> – Vijaya Kameshwari</h4>
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button id="prev" class="slider-btn">&lt;</button>
+              <button id="next" class="slider-btn">&gt;</button>
+            </div>
+          </div>
+        </section>
 
 
 
@@ -469,21 +482,21 @@
         <!-- Footer Section -->
         <footer class="text-center text-muted small py-3">
           <section id="contact">
-          <div class="container">
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/physiomax.clinic/?igsh=a3Q4ZTNmajBvbDcz"><i
-                  class="fab fa-instagram"></i></a>
-              <a href="https://www.youtube.com/@physiomaxclinic"><i class="fab fa-youtube"></i></a>
+            <div class="container">
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/physiomax.clinic/?igsh=a3Q4ZTNmajBvbDcz"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@physiomaxclinic"><i class="fab fa-youtube"></i></a>
+              </div>
             </div>
-          </div>
-          <p>Contact us: <a href="tel:+9160911611">+91 91609 11611</a> | <br> <a href="tel:+9642911711"> +91 96429 11711</a> | <a
-              href="mailto:dmphysiomax@gmail.com">dmphysiomax@gmail.com</a></p>
-          <p>&copy; 2024 Physiomax. All rights reserved.</p>
+            <p>Contact us: <a href="tel:+9160911611">+91 91609 11611</a> | <br> <a href="tel:+9642911711"> +91 96429
+                11711</a> | <a href="mailto:dmphysiomax@gmail.com">dmphysiomax@gmail.com</a></p>
+            <p>&copy; 2024 Physiomax. All rights reserved.</p>
       </div>
       <!-- Social Media Icons -->
-       </section>
+      </section>
       </footer>
     </div>
   </div>
