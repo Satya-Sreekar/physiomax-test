@@ -41,9 +41,6 @@ body {
   width: 100%;
   row-gap: 20px;
 }
-.container {
-  height: 80px;
-}
 
 .logo {
   max-width: 15vw;
