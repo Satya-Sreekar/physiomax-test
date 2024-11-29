@@ -8,8 +8,8 @@
   --font-family-heading: "Montserrat", sans-serif;
   --shadow-light:
   0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-;
-  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);;
+
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
   --header-bg: #1c3c6b;
   --accent-color: #f0932b;
 }
@@ -172,9 +172,11 @@ body {
 }
 
 .service-box {
-  background: #fff;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: var(--shadow-light);
+  
+ 
+             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1.5rem;
   margin: 1rem auto;
@@ -185,6 +187,7 @@ body {
 .service-box:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
+ 
 }
 
 .service-box h5 {
