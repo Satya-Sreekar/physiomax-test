@@ -1,0 +1,169 @@
+/* Profile Section */
+.profile-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  margin-bottom: 80px;
+}
+
+#profile {
+  border-radius: 10px;
+  padding: 40px;
+  background: #fcfafa;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: auto;
+  height: auto;
+  font-family: var(--font-family-main);
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Heading */
+#profile h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-family: var(--font-family-main);
+}
+
+/* Profile Image */
+.img {
+  overflow: hidden;
+  object-position: top;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2c3e50;
+  /* margin: 140px auto 30px auto; */
+  transition: transform 0.3s ease;
+}
+
+.img-divya:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+/* Profile Title and Intro */
+#profile p strong {
+  font-family: var(--font-family-main);
+  display: block;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: left;
+  max-width: 400px;
+}
+
+/* Profile Description */
+#profile p {
+  text-wrap: balance;
+  font-family: var(--font-family-main);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.exit-botton {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  z-index: 9999;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (min-width: 481px) and (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    /* padding: 0; */
+
+    /* Stack elements vertically */
+  }
+
+  #profile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+  }
+
+  .img-divya {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+  }
+
+  .profile-text {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  #profile p strong {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  #profile p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #profile {
+    flex-direction: column;
+    /* Stack elements vertically */
+
+    width: 95%;
+  }
+
+  #profile h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    margin-bottom: 20px;
+  }
+
+  .img-divya {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+  }
+
+  .profile-text {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  #profile p strong {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  #profile p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}
