@@ -680,10 +680,12 @@ footer i {
   color: #FF5055;  /* Custom color for the 'omega' text */
   font-weight: bold;
   font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
 }
 
 .footer-text .think {
   color: black;
+  font-size: 1.2rem;
   font-family: "JetBrains Mono", monospace;
 }
 
