@@ -623,7 +623,17 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
+
+
+  
+   
+  
 }
+
+
+
+
+
 footer i {
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -636,6 +646,59 @@ footer i {
   flex-direction: column;
   display: flex;
 }
+
+/* Footer container */
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* ThinkOmega logo on the left */
+.logo-container {
+  flex: 1;
+}
+
+.thinkomega-logo {
+  height: 40px;  /* Adjust the size as per the logo */
+}
+
+/* Footer Text */
+.footer-text {
+  flex: 2;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace; /* Using the JetBrains Mono font */
+}
+
+.footer-text .omega {
+  color: #FF5055;  /* Custom color for the 'omega' text */
+  font-weight: bold;
+}
+
+.footer-text .footer-link {
+  color: #FF5055;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-text .footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Our logo on the right */
+.our-logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.our-logo {
+  height: 40px;  /* Adjust the size as per your logo */
+}
+
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
@@ -661,6 +724,43 @@ footer i {
   .logo {
     max-width: 35vw;
     height: auto;
+  }
+
+  
+
+
+  
+}
+
+
+/* footer company details */
+
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align all items */
+    justify-content: center;
+  }
+
+  .logo-container,
+  .footer-text,
+  .our-logo-container {
+    flex: unset; /* Reset flex properties */
+    width: 100%; /* Full-width for each section */
+    text-align: center; /* Center-align content */
+  }
+
+  .footer-text {
+    margin: 15px 0; /*Add spacing between sections */
+  }
+
+  .thinkomega-logo,
+  .our-logo {
+    display: none;
   }
 }
 
