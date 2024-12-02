@@ -1,0 +1,99 @@
+.map-box {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+
+  justify-content: center;
+}
+.map-box h1 {
+  font-family: var(--font-family-main);
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.map-container h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+}
+.map-section {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+
+.map {
+  border-radius: 15px;
+  width: 400px;
+  height: 200px;
+}
+
+/* Mobile Responsive Styles */
+
+/* For Devices with a width of 768px or less */
+@media (max-width: 768px) {
+  .map-box {
+    height: auto; /* Adjust the height for mobile */
+  }
+
+  .map-box h1 {
+    font-size: 1.5rem; /* Make the heading text smaller */
+  }
+
+  .map-container h2 {
+    font-size: 1.2rem; /* Smaller subheading text */
+  }
+
+  .map-section {
+    padding: 20px;
+    flex-direction: column; /* Stack the maps vertically on mobile */
+    row-gap: 20px; /* Space between maps */
+  }
+
+  .map {
+    width: 100%; /* Make the maps take up the full width */
+    height: 250px; /* Adjust the height */
+  }
+}
+
+/* For Devices with a width of 480px or less (smaller mobile devices) */
+@media (max-width: 480px) {
+  .map-box h1 {
+    font-size: 1.2rem; /* Even smaller heading text */
+  }
+
+  .map-container h2 {
+    font-size: 1rem; /* Even smaller subheading text */
+  }
+
+  .map-section {
+    padding: 10px;
+  }
+
+  .map {
+    width: 100%; /* Keep maps full width on smaller devices */
+    height: 200px; /* Adjust the height for smaller screens */
+  }
+}
+
+/* For Devices with a width of 320px or less (Extra small devices like old phones) */
+@media (max-width: 320px) {
+  .map-box h1 {
+    font-size: 1rem; /* Make the heading text smaller */
+  }
+
+  .map-container h2 {
+    font-size: 0.9rem; /* Make the subheading text smaller */
+  }
+
+  .map-section {
+    padding: 5px;
+  }
+
+  .map {
+    width: 100%;
+    height: 150px; /* Adjust the height for very small devices */
+  }
+}

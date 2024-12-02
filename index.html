@@ -11,16 +11,9 @@
 
   <link rel="stylesheet" href="butterfly.css">
   <link rel="stylesheet" href="styles.css">
-  <!-- <style>
-    .features {
-      list-style: none; /* Removes default bullets */
-      padding: 0;       /* Removes extra padding */
-      margin: 0;        /* Removes extra margin */
-    }
-    .features li {
-      margin-right: 15px; /* Spacing between items */
-    }
-  </style> -->
+  <link rel="stylesheet" href="Map.css"
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6KB_l9Gmxd0QdwWvZr1gVYKblNXo836Y"></script> -->
+ 
 </head>
 
 <body>
@@ -475,7 +468,23 @@
           </div>
         </section>
 
+<section class="map-box" >
 
+  <h1>Physiomax Clinic Locations</h1>
+  <div class="map-section">
+  <div class="map-container">
+    <h2>Physiomax Attapur</h2>
+    <div id="map-attapur" class="map"></div>
+  </div>
+
+  <!-- Map for Lakdikapul -->
+  <div class="map-container">
+    <h2>Physiomax Lakdikapul</h2>
+    <div id="map-lakdikapul" class="map"></div>
+  </div>
+  </div>
+  
+</section>
 
 
 
@@ -506,6 +515,12 @@
   <script src="./Counter.js"></script>
   <script src="./Slider.js"></script>
   <script src="./interSection.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6KB_l9Gmxd0QdwWvZr1gVYKblNXo836Y&callback=initMap" async defer></script>
+  <script src="./Map.js"></script>
+  
+
+ 
+</body>
 </body>
 
 </html>
