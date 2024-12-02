@@ -653,6 +653,7 @@ footer i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   font-size: 14px;
 }
@@ -670,13 +671,22 @@ footer i {
 .footer-text {
   flex: 2;
   text-align: center;
-  font-family: "JetBrains Mono", monospace; /* Using the JetBrains Mono font */
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-main)
 }
 
 .footer-text .omega {
   color: #FF5055;  /* Custom color for the 'omega' text */
   font-weight: bold;
+  font-family: "JetBrains Mono", monospace;
 }
+
+.footer-text .think {
+  color: black;
+  font-family: "JetBrains Mono", monospace;
+}
+
 
 .footer-text .footer-link {
   color: #FF5055;
