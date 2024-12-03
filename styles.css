@@ -25,10 +25,10 @@ body {
   font-family: var(--font-family-main);
   background-color: var(--background-color);
   color: var(--text-color);
-  display: flex;
+  /* display: flex;
   justify-content: center;
   
-  flex-direction: column;
+  flex-direction: column; */
   padding: 0;
   margin: 0;
 }
@@ -396,7 +396,7 @@ a:hover {
   width: 100%; /* Ensure it spans the full width on smaller devices */
   background: var(--background-color);
   color: #333;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-main);
 }
 
 .about-us .row {
@@ -430,7 +430,8 @@ a:hover {
 }
 
 .features li {
-  text-wrap: balance;
+
+
   font-size: 16px; /* Reduce font size slightly */
   margin-bottom: 8px;
 }
@@ -470,6 +471,7 @@ a:hover {
 
   .features li {
     font-size: 13px;
+    width: auto;
   }
 }
 
@@ -489,6 +491,7 @@ a:hover {
 
   .features li {
     font-size: 12px;
+    width: auto;
   }
 
   .btn-primary {
