@@ -49,11 +49,6 @@
   transition: transform 0.3s ease;
 }
 
-.img-divya:hover {
-  transform: scale(1.05);
-  /* Slight zoom effect on hover */
-}
-
 /* Profile Title and Intro */
 #profile p strong {
   font-family: var(--font-family-main);
@@ -87,46 +82,6 @@
   cursor: pointer;
 }
 
-.gallery {
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 16px;
-  padding: 16px;
-}
-
-.gallery-pic {
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
-  max-width: 300px; /* Limit the size of each image */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery-pic:hover {
-  transform: scale(1.05); /* Add hover effect for images */
-}
-
-/* For mobile devices */
-@media (max-width: 768px) {
-  .gallery {
-    justify-content: center; /* Center images on smaller screens */
-  }
-  .gallery-pic {
-    max-width: 90%; /* Make images take up more space on mobile */
-  }
-}
-
-/* For larger desktops */
-@media (min-width: 1024px) {
-  .gallery-pic {
-    max-width: 25%; /* Allow up to four images in a row on large screens */
-  }
-}
-
 /* Mobile responsive */
 @media (min-width: 481px) and (max-width: 768px) {
   #profile {
@@ -144,12 +99,6 @@
   .profile-image {
     /* margin-top: 20px; */
     margin-bottom: 20px;
-  }
-
-  .img-divya {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
   }
 
   .profile-text {
@@ -185,13 +134,6 @@
   .profile-image {
     margin-bottom: 20px;
   }
-
-  .img-divya {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
-  }
-
   .profile-text {
     padding: 0 20px;
     text-align: center;
