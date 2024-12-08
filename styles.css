@@ -604,7 +604,7 @@ a:hover {
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 50%;
+  border-radius: 25%;
   font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -808,4 +808,43 @@ a:hover {
     background-size: contain;
     min-height: 50vh;
   }
+}
+
+/* Floating Button */
+.floter{
+  display: flex;
+  justify-content: center;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.ig{
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.my-float{
+	margin-top:16px;
+}
+@media screen and (max-width: 768px) {
+  .ig{
+    /* margin-bottom: 8vh; */
+    margin-right: 65vw;
+  }
+  
+}
+@media screen and (min-width: 768px) {
+  .ig{
+    margin-right: 5vw;
+  }
+  
 }
