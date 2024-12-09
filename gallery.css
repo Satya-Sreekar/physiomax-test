@@ -1,0 +1,42 @@
+
+.gallery {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .gallery-pic {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 1/1; /* Maintain aspect ratio of images */
+    height: 300px;
+    max-width: 300px; /* Limit the size of each image */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-pic:hover {
+    transform: scale(1.05); /* Add hover effect for images */
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .gallery {
+      justify-content: center; /* Center images on smaller screens */
+    }
+    .gallery-pic {
+      max-width: 90%; /* Make images take up more space on mobile */
+    }
+  }
+  
+  /* For larger desktops */
+  @media (min-width: 1024px) {
+    .gallery-pic {
+      max-width: 25%; /* Allow up to four images in a row on large screens */
+    }
+  }
+  
